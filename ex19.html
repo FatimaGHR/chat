@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="asset/js/jquery.js"></script>
+    <link rel="stylesheet" href="asset/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        .chat{
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            border-radius: 20px;
+            border: 1px solid rgb(31, 30, 30);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color:black; 
+        }
+        iframe{
+            height: 650px;
+            width: 500px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation-name: fram;
+            animation-duration: 3s;
+            
+        }
+        button{
+            border: none;
+            position: absolute;
+            top:75px ;
+            right: 60px;
+           
+            
+            ;
+            
+            
+        }
+
+        @keyframes fram {
+    0%{
+        transform: scale(0.5);
+        
+    }
+    100%{
+        transform: scale(1);
+      
+
+    }
+    
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="chat">🗨</div>
+    <iframe src="exoverflow.html" style="display:none;"></iframe>
+    <button style="display: none;">❌</button>
+
+    <script>
+        $('div').click(function(){
+            $('div').css("display","none");
+            $('iframe').css("display","block");
+            $('button').css("display","block");
+
+
+        })
+
+        $('button').click(function(){
+            $('div').css("display","block");
+            $('iframe').css("display","none");
+            $('button').css("display","none");
+
+
+        })
+
+    </script>
+</body>
+</html>
